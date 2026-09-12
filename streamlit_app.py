@@ -2,12 +2,9 @@ import streamlit as st
 
 st.set_page_config(
     page_title="UDS Student Toolkit",
-    page_icon="uds logo.png",
+    page_icon="🎓",
     layout="centered"
 )
-
-# Logo
-st.image("uds_logo.png", width=120)
 
 st.title("🎓 UDS Student Toolkit")
 st.caption(
@@ -109,8 +106,8 @@ elif page == "📊 GPA Calculator":
             point = grade_points[grade]
 
             st.caption(
-                f"Grade: {grade}  •  "
-                f"Grade Point: {point:.1f}  •  "
+                f"Grade: {grade} • "
+                f"Grade Point: {point:.1f} • "
                 f"Credits: {credit}"
             )
 
