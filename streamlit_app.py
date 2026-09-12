@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="UDS Student Toolkit",
-    page_icon="uds_logo.png",
+    page_icon="uds logo.png",
     layout="centered"
 )
 
