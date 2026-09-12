@@ -1,13 +1,17 @@
 import streamlit as st
 
+# -----------------------------
+# PAGE SETTINGS
+# -----------------------------
 st.set_page_config(
     page_title="UDS Student Toolkit",
     page_icon="🎓",
     layout="centered"
 )
 
-# ---------------- HEADER ----------------
-
+# -----------------------------
+# TITLE
+# -----------------------------
 st.title("🎓 UDS Student Toolkit")
 
 st.caption(
@@ -17,8 +21,9 @@ st.caption(
 
 st.divider()
 
-# ---------------- GRADE POINTS ----------------
-
+# -----------------------------
+# GRADE POINTS
+# -----------------------------
 grade_points = {
     "A": 4.0,
     "B+": 3.5,
@@ -29,10 +34,23 @@ grade_points = {
     "Fail": 0.0
 }
 
-# ---------------- PROGRAMMES & COURSES ----------------
+# -----------------------------
+# COURSE DATABASE
+# -----------------------------
+# Structure:
+# Programme
+#     ↓
+# Level
+#     ↓
+# Trimester
+#     ↓
+# Courses
 
 courses = {
 
+    # =========================
+    # COMPUTER SCIENCE
+    # =========================
     "BSc Computer Science": {
 
         "100": {
@@ -71,7 +89,149 @@ courses = {
         }
     },
 
-    "BSc Information Technology": {
+    # =========================
+    # OTHER UDS PROGRAMMES
+    # =========================
+
+    "BSc Accounting": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Banking and Finance": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Business Information Systems": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Economics": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Food Science and Technology": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Food Systems": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "BSc Biochemistry": {
         "100": {
             "Trimester 1": [],
             "Trimester 2": [],
@@ -163,76 +323,30 @@ courses = {
         }
     },
 
-    "BSc Business Administration": {
-        "100": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "200": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "300": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "400": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        }
-    },
-
-    "BSc Accounting": {
-        "100": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "200": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "300": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "400": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        }
-    },
-
-    "BSc Economics": {
-        "100": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "200": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "300": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        },
-        "400": {
-            "Trimester 1": [],
-            "Trimester 2": [],
-            "Trimester 3": []
-        }
-    },
-
     "BSc Public Health": {
+        "100": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "200": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "300": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        },
+        "400": {
+            "Trimester 1": [],
+            "Trimester 2": [],
+            "Trimester 3": []
+        }
+    },
+
+    "Bachelor of Law (LLB)": {
         "100": {
             "Trimester 1": [],
             "Trimester 2": [],
@@ -256,60 +370,80 @@ courses = {
     }
 }
 
-# ---------------- MENU ----------------
+# -----------------------------
+# SIDEBAR / PAGE NAVIGATION
+# -----------------------------
 
 page = st.radio(
     "Choose a tool",
     ["🏠 Home", "📊 GPA Calculator"]
 )
 
-# ---------------- HOME ----------------
+# -----------------------------
+# HOME
+# -----------------------------
 
 if page == "🏠 Home":
 
     st.subheader("Welcome 👋🏽")
 
     st.write(
-        "Welcome to your personal UDS Student Toolkit."
+        "Welcome to the UDS Student Toolkit."
     )
 
     st.write(
-        "Select your programme and academic level "
+        "Choose your programme, level and trimester "
         "to calculate your GPA."
     )
 
+    st.divider()
+
     st.markdown("### 📊 Available Tool")
-    st.markdown("**GPA Calculator**")
 
+    st.markdown(
+        "**GPA Calculator**"
+    )
 
-# ---------------- GPA CALCULATOR ----------------
+# -----------------------------
+# GPA CALCULATOR
+# -----------------------------
 
 elif page == "📊 GPA Calculator":
 
     st.subheader("📊 GPA Calculator")
 
+    # Student name
     student_name = st.text_input(
         "👤 Student Name"
     )
 
+    # Programme
     programme = st.selectbox(
-        "🎓 Programme",
+        "🎓 Select Programme",
         list(courses.keys())
     )
 
+    # Level ONLY comes from selected programme
     level = st.selectbox(
-        "📚 Level",
+        "📚 Select Level",
         list(courses[programme].keys())
     )
 
+    # Trimester ONLY comes from selected programme + level
     trimester = st.selectbox(
-        "📅 Trimester",
+        "📅 Select Trimester",
         list(courses[programme][level].keys())
     )
 
+    # Get courses ONLY for the selected programme,
+    # selected level and selected trimester
     selected_courses = courses[programme][level][trimester]
 
-    # ---------------- NO COURSES ----------------
+    st.divider()
+
+    # -----------------------------
+    # SHOW COURSES
+    # -----------------------------
 
     if not selected_courses:
 
@@ -318,21 +452,25 @@ elif page == "📊 GPA Calculator":
             f"{trimester} have not been added yet."
         )
 
-    # ---------------- COURSES ----------------
-
     else:
 
         st.subheader(
-            f"📚 {programme} — Level {level} — {trimester}"
+            f"📚 {programme}"
         )
 
-        total_points = 0
+        st.caption(
+            f"Level {level} • {trimester}"
+        )
+
+        total_grade_points = 0
         total_credits = 0
 
+        # Show ONLY courses belonging to the
+        # selected programme
         for code, title, credit in selected_courses:
 
             grade = st.selectbox(
-                f"{code} - {title} ({credit} credits)",
+                f"{code} — {title} ({credit} credits)",
                 list(grade_points.keys()),
                 key=f"{programme}_{level}_{trimester}_{code}"
             )
@@ -345,12 +483,14 @@ elif page == "📊 GPA Calculator":
                 f"Credits: {credit}"
             )
 
-            total_points += point * credit
+            total_grade_points += point * credit
             total_credits += credit
 
         st.divider()
 
-        # ---------------- CALCULATE ----------------
+        # -----------------------------
+        # CALCULATE GPA
+        # -----------------------------
 
         if st.button(
             "Calculate GPA",
@@ -358,19 +498,32 @@ elif page == "📊 GPA Calculator":
         ):
 
             if student_name.strip() == "":
+
                 st.warning(
                     "Please enter your name before calculating."
                 )
 
+            elif total_credits == 0:
+
+                st.warning(
+                    "There are no courses available for "
+                    "this selection yet."
+                )
+
             else:
 
-                gpa = total_points / total_credits
+                gpa = (
+                    total_grade_points /
+                    total_credits
+                )
 
                 st.success(
                     f"🎉 {student_name}, your GPA is {gpa:.2f}"
                 )
 
-                st.markdown("### 📋 Trimester Summary")
+                st.markdown(
+                    "### 📋 Trimester Summary"
+                )
 
                 st.write(
                     f"**Student:** {student_name}"
@@ -393,35 +546,4 @@ elif page == "📊 GPA Calculator":
                 )
 
                 st.write(
-                    f"**Total Grade Points:** "
-                    f"{total_points:.1f}"
-                )
-
-                # ---------------- PERFORMANCE ----------------
-
-                if gpa >= 3.6:
-
-                    st.balloons()
-
-                    st.success(
-                        "🔥 Excellent! You're on track for First Class!"
-                    )
-
-                elif gpa >= 3.0:
-
-                    st.info(
-                        "👏 Strong performance! Keep pushing."
-                    )
-
-                elif gpa >= 2.0:
-
-                    st.warning(
-                        "⚠️ You can still improve your GPA."
-                    )
-
-                else:
-
-                    st.error(
-                        "📚 Keep working hard and seek help "
-                        "where you need it."
-                    )
+                    f"
